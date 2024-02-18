@@ -1,12 +1,15 @@
 ﻿int[] array = { 1, 2, 3, 4, 5, 6, 7 };
+int i = array.Length;
 
-void ReversArray(int i)
+void ReversArray(int[] arr, int i)
 {
-    Console.Write($"{array[i]} ");
-
+    i--;
+    Console.Write($"{arr[i]} ");
+    
     if (i > 0)
     {
-        ReversArray(--i);
+        ReversArray(arr, i);
     }
+
 }
-ReversArray(array.Length - 1);
+ReversArray(array, i);
